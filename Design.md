@@ -1,6 +1,7 @@
-#Designing Together
+# Designing Together
 * Identify the objects in your program. Look for the central nouns in the game requirements. Narrow down your list to just the most essential ones. For each object, ask yourself, "is this an object, or the state in another object?"
- * 
+
+ * Object 
 
 * Define the responsibility, behaviors and state for each object. Look for related verbs in the game requirements to help you. When you are working on an object's state, ask yourself, "what information is required to fulfill its behaviors?"
 
