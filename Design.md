@@ -1,47 +1,52 @@
-# Designing Together
-* Identify the objects in your program. Look for the central nouns in the game requirements. Narrow down your list to just the most essential ones. For each object, ask yourself, "is this an object, or the state in another object?"
-
- * WordList - Anita
-  * Attribute: List of Words (private)
-  * Methods: getRandomWord() return random.rand(List)
-   * Encapsulation: private list of words
+# Jumper Classes
+## WordList - Anita
+* Attributes: 
+    * List of Words (private) 
+* Methods: 
+    * getRandomWord() return random.rand(List) 
+* Encapsulation: private list of words 
     
- * Jumper - Pierce
-  * Attributes: How much parachute left (4 Levels)
-   * List of strings to contain ascii art
-  * Methods: DrawJumper()
-   * RegisterMiss()
-   * IsStillAlive()
-  *Encapsulation: how much parachute left is private / artwork private   
+## Jumper - Pierce
+* Attributes: 
+    * How much parachute left (4 Levels) 
+    * List of strings to contain ascii art 
+* Methods: DrawJumper()
+    * RegisterMiss()
+    * IsStillAlive()
+* Encapsulation: how much parachute left is private / artwork private   
    
- * Puzzle - Andrew
-   * Attr: secret word (aka puzzle) - random word 
-   from WordList
-   * _is_playing  = Jumper.IsStillAlive() and puzzle is not complete
-   * guesses[]
-  * Methods: makeGuess(letter) - returns True or False  
-   * _isPuzzleComplete() - secretword == displayword 
-   * displayWord (correct letters + blanks)
-   * checks guess
-   * calls RegisterMiss() if wrong
-   * calls Jumper.DrawJumper()
-   * isPlaying() return _is_playing
-   * getDisplayWord()
-  * Encapsulation: current puzzle state (displayWord), secretWord private
- * Director - Matthew
+## Puzzle - Andrew
+* Attributes:
+    * secret word (aka puzzle) - random word from WordList 
+    * _is_playing = (Jumper.IsStillAlive() and puzzle is not complete)
+    * guesses[]
+* Methods: makeGuess(letter) - returns True if or False  
+    * _isPuzzleComplete() - secretword == displayword 
+    * displayWord (correct letters + blanks)
+    * checks guess
+    * calls RegisterMiss() if wrong
+    * calls Jumper.DrawJumper()
+    * isPlaying() return _is_playing
+    * getDisplayWord()
+    * Encapsulation: current puzzle state (displayWord), secretWord private
+## Director - Matthew
+* Attributes:
+    _puzzle
+* Methods:
    * Start game
    * Get input
    * Loop while playing 
-    * call puzzle methods
-    * make guesses
-    * print the puzzle word so far (with blanks)
-   * Encapsulation: puzzle itself 
+        * call puzzle methods
+        * make guesses
+        * print the puzzle word so far (with blanks)
+* Encapsulation: puzzle itself 
 
 
  Director has a puzzle
  Puzzle has a WordList, Jumper
- 
-    
+
+# Designing Together
+* Identify the objects in your program. Look for the central nouns in the game requirements. Narrow down your list to just the most essential ones. For each object, ask yourself, "is this an object, or the state in another object?"    
 
 * Define the responsibility, behaviors and state for each object. Look for related verbs in the game requirements to help you. When you are working on an object's state, ask yourself, "what information is required to fulfill its behaviors?"
 
