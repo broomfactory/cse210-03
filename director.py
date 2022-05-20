@@ -19,9 +19,7 @@ class Director:
             self (Director): an instance of Director.
         """
         self._puzzle = Puzzle()
-        self._is_playing = True    
-        self._guess = None
-        self._is_guess_correct = True            
+        self._is_playing = True            
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -41,7 +39,7 @@ class Director:
     def _show_puzzle(self):
         """Displays the current puzzle and jumper state"""
         print(f"{_puzzle.getDisplayWord()}")
-        _puzzle.draw_jumper()
+        _puzzle.drawJumper()
 
     def _get_inputs(self):
         """Ask the player for a guess

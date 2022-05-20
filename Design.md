@@ -17,19 +17,24 @@
    
 ## Puzzle - Andrew
 * Attributes:
-    * secret word (aka puzzle) - random word from WordList 
+    * _secret_word (aka puzzle) - random word from WordList 
+    * _display_word (the completed puzzle so far with _ where letters have not been guessed yet)
     * _is_playing = (Jumper.IsStillAlive() and puzzle is not complete)
-    * guesses[]
-* Methods: makeGuess(letter) - returns True if or False  
-    * _isPuzzleComplete() - secretword == displayword 
-    * displayWord (correct letters + blanks)
-    * checks guess
-    * calls RegisterMiss() if wrong
-    * draw_jumper() calls Jumper.DrawJumper()
-    * isPlaying() return _is_playing
-    * getDisplayWord()
-    * Encapsulation: current puzzle state (displayWord), secretWord private
+    * guesses[] --probably not needed
+    * _jumper - an instance of Jumper
     
+* Methods: 
+    * makeGuess(letter) - returns True if or False  
+        * checks guess
+        * if correct, update _display_word by placing the guess in the appropriate location
+        * calls _jumper.RegisterMiss() if wrong
+        * sets _is_playing to false if _isPuzzleComplete() or not _jumper.IsStillAlive()
+    * _isPuzzleComplete() - returns (secretword == displayword)
+    * getDisplayWord() (returns _display_word - correct letters + blanks)
+    * drawJumper() calls Jumper.DrawJumper()
+    * isPlaying() return _is_playing
+    * Encapsulation: current puzzle state (displayWord), secretWord private
+
 ## Director - Matthew
 * Attributes:
     _puzzle
