@@ -41,9 +41,11 @@
         * print the puzzle word so far (with blanks)
 * Encapsulation: puzzle itself 
 
+## Hierarchy
 
- **Director** has a **puzzle** 
- **Puzzle** has a **WordList**, **Jumper**
+**Director** has a **puzzle** 
+
+**Puzzle** has a **WordList**, **Jumper**
 
 # Designing Together
 * Identify the objects in your program. Look for the central nouns in the game requirements. Narrow down your list to just the most essential ones. For each object, ask yourself, "is this an object, or the state in another object?"    
