@@ -25,20 +25,22 @@
     * displayWord (correct letters + blanks)
     * checks guess
     * calls RegisterMiss() if wrong
-    * calls Jumper.DrawJumper()
+    * draw_jumper() calls Jumper.DrawJumper()
     * isPlaying() return _is_playing
     * getDisplayWord()
     * Encapsulation: current puzzle state (displayWord), secretWord private
+    
 ## Director - Matthew
 * Attributes:
     _puzzle
 * Methods:
    * Start game
-   * Get input
+   * _Get input()
    * Loop while playing 
         * call puzzle methods
-        * make guesses
-        * print the puzzle word so far (with blanks)
+        * make guesses _Get input
+        * doOutput print the puzzle word so far (with blanks)
+ 
 * Encapsulation: puzzle itself 
 
 ## Hierarchy
