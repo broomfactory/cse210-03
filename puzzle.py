@@ -38,6 +38,9 @@ class Puzzle:
             Updates _hidden_word based on correct guess
         """
         #Loop through self._secret_word
+        for i in self._secret_word:
+            if self._secret_word[i] == guess:
+                self._hidden_word[i] = guess
         #If self._secret_word[i] == guess
         # Set self._hidden_word[i] = guess
     def _isPuzzleComplete(self):
