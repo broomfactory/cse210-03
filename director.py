@@ -37,8 +37,8 @@ class Director:
 
     def _show_puzzle(self):
         """Displays the current puzzle and jumper state"""
-        print(f"{_puzzle.getDisplayWord()}")
-        _puzzle.drawJumper()
+        print(f"{self._puzzle.getDisplayWord()}")
+        self._puzzle.drawJumper()
 
     def _get_inputs(self):
         """Ask the player for a guess
@@ -64,6 +64,6 @@ class Director:
         if not self._is_playing:
             return 
 
-        _puzzle.makeGuess(self._get_inputs())
-        self.is_playing = _puzzle.isPlaying()
+        self._puzzle.makeGuess(self._get_inputs())
+        self.is_playing = self._puzzle.isPlaying()
  
