@@ -31,9 +31,8 @@ class Director:
         #Display initial puzzle and jumper
         self._show_puzzle()
 
-        while self.is_playing:            
-            self._get_inputs()
-            self._make_guess()
+        while self.is_playing:
+            self._make_guess(self._get_inputs())
             self._show_puzzle()
 
     def _show_puzzle(self):
@@ -48,7 +47,7 @@ class Director:
             self (Director): An instance of Director.
         """
 
-        guess = None
+        guess = " "
 
         while guess not in "abcdefghijklmnopqrstuvwxyz":
             guess = input("Guess a letter [a-z]: ").lower()
