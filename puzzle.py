@@ -65,6 +65,7 @@ class Puzzle:
              can request the current jumper be drawn
         """
         self._jumper.DrawJumper()
+        
     def isPlaying(self):
         """
             Returns True if the game is going
