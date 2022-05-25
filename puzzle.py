@@ -26,12 +26,12 @@ class Puzzle:
         # Check to see if the guess is found in the word
         is_guess_correct = (guess in self._secret_word)
         if is_guess_correct:
-            #update display word - call _updateHiddenWord
-            pass
+            self._updateHiddenWord(guess)
         else:
             self._jumper.registerMiss()
+
         #Update self._is_playing
-        self._is_playing = (self._jumper.is_alive() and not (self._secret_word == self._hidden_word))
+        self._is_playing = (self._jumper.is_alive() and not self._isPuzzleComplete())
         return is_guess_correct
         
     def _updateHiddenWord(self, guess):
@@ -44,13 +44,14 @@ class Puzzle:
                 self._hidden_word[i] = guess
         #If self._secret_word[i] == guess
         # Set self._hidden_word[i] = guess
+
     def _isPuzzleComplete(self):
-        """
-        
+        """        
             non public method to check if the puzzle is
             complete
         """
-        return (self._secret_word == self._hidden_word)
+        return (self._secret_word == self._hidden_word.join())
+
     def getDisplayWord(self):
         """
             Returns the puzzle word in progress
