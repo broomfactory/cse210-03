@@ -6,12 +6,19 @@ class Puzzle:
         Class to represent the puzzle
     """
     def __init__(self):
+        """
+          Called on creation of Puzzle instance
+          arg: self - an instance of Puzzle
+        """
+
+
         word_list = WordList()
         self._secret_word = word_list.get_random_word() 
         hidden = ['_'] * len(self._secret_word)
         self._hidden_word = list(hidden)
         
         self._jumper = Jumper()
+
         #Start with _is_playing set to True
         self._is_playing = True 
  
@@ -32,6 +39,8 @@ class Puzzle:
 
         #Update self._is_playing
         self._is_playing = (self._jumper.is_alive() and not self._isPuzzleComplete())
+        
+        #Report result of guess
         return is_guess_correct
         
     def _updateHiddenWord(self, guess):
@@ -65,7 +74,7 @@ class Puzzle:
              can request the current jumper be drawn
         """
         self._jumper.DrawJumper()
-        
+
     def isPlaying(self):
         """
             Returns True if the game is going
