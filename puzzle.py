@@ -8,7 +8,8 @@ class Puzzle:
     def __init__(self):
         word_list = WordList()
         self._secret_word = word_list.get_random_word() 
-        self._hidden_word = ['_'] * len(self._secret_word)
+        hidden = ['_'] * len(self._secret_word)
+        self._hidden_word = list(hidden)
         
         self._jumper = Jumper()
         #Start with _is_playing set to True
@@ -55,7 +56,7 @@ class Puzzle:
             Returns the puzzle word in progress
             _hidden_word = blanks + correct guesses
         """
-        return self._hidden_word
+        return self._hidden_word.join()
         
     def drawJumper(self):
         """
