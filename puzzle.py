@@ -66,14 +66,14 @@ class Puzzle:
             Returns the puzzle word in progress
             _hidden_word = blanks + correct guesses
         """
-        return self._hidden_word.join()
+        return ''.join(self._hidden_word)
         
     def drawJumper(self):
         """
-             calls Jumper.DrawJumper() so the director
+             calls Jumper.draw_jumper() so the director
              can request the current jumper be drawn
         """
-        self._jumper.DrawJumper()
+        self._jumper.draw_jumper()
 
     def isPlaying(self):
         """
