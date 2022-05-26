@@ -14,7 +14,7 @@ class Jumper:
         '''
         self._parachute = [
             '  ___  ', 
-            ' /   \ ', 
+            ' /___\ ', 
             ' \   / ', 
             '  \ /  ', 
             '   O   '
@@ -22,21 +22,25 @@ class Jumper:
 
     def draw_jumper(self):
         '''
+            Draws the current state of the jumper
         '''
-        for i in self._parachute:
+
+        for i in range(0,len(self._parachute)):
             if len(self._parachute) > 1:
-                print(i)
+                print(self._parachute[i])
             else:
                 print('   X   ')
 
-            print('  /|\  ')
-            print('  / \  ')
+        print('  /|\  ')
+        print('  / \  ')
+        print('')
+        print('^^^^^^^')
 
     def register_miss(self):
         '''
             Removes the first section from the parachute
         '''
-        self._parachute.pop()
+        self._parachute.pop(0)
     
     def is_alive(self):
         '''

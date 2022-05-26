@@ -1,4 +1,4 @@
-from wordlist import WordList
+from WordList import WordList
 from jumper import Jumper
 
 class Puzzle:
@@ -35,7 +35,7 @@ class Puzzle:
         if is_guess_correct:
             self._updateHiddenWord(guess)
         else:
-            self._jumper.registerMiss()
+            self._jumper.register_miss()
 
         #Update self._is_playing
         self._is_playing = (self._jumper.is_alive() and not self._isPuzzleComplete())
@@ -48,7 +48,7 @@ class Puzzle:
             Updates _hidden_word based on correct guess
         """
         #Loop through self._secret_word
-        for i in self._secret_word:
+        for i in range(0, len(self._secret_word)):
             if self._secret_word[i] == guess:
                 self._hidden_word[i] = guess
         #If self._secret_word[i] == guess
@@ -59,7 +59,7 @@ class Puzzle:
             non public method to check if the puzzle is
             complete
         """
-        return (self._secret_word == self._hidden_word.join())
+        return (self._secret_word == ''.join(self._hidden_word))
 
     def getDisplayWord(self):
         """
