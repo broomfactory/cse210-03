@@ -2,7 +2,7 @@
 
 class Jumper:
     '''
-    
+        This class represents the jumper.
     '''
     
 
@@ -24,7 +24,7 @@ class Jumper:
         '''
         '''
         for i in self._parachute:
-            if len(self._parachute) > 0:
+            if len(self._parachute) > 1:
                 print(i)
             else:
                 print('   X   ')
@@ -40,8 +40,9 @@ class Jumper:
     
     def is_alive(self):
         '''
+            Reports True if
         '''
-        if len(self._parachute) == 0:
+        if len(self._parachute) > 1:
             return True
         else:
             return False
