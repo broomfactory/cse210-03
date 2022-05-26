@@ -4,8 +4,6 @@ class Jumper:
     '''
         This class represents the jumper.
     '''
-    
-
     def __init__(self):
         '''Constructs a new Jumper.
         
