@@ -24,7 +24,6 @@ class Jumper:
         '''
             Draws the current state of the jumper
         '''
-<<<<<<< HEAD
 
         for i in range(0,len(self._parachute)):
             if len(self._parachute) > 1:
@@ -36,18 +35,6 @@ class Jumper:
         print('  / \  ')
         print('')
         print('^^^^^^^')
-=======
-        if len(self._parachute) > 1:
-            
-            for i in self._parachute:
-                print(i)
-        else:
-            print('   X   ')
-
-        print('  /|\  ')
-        print('  / \  ')
-
->>>>>>> 6fc25ded2a537b9ec974780c5be7bb20906ae4fa
 
     def register_miss(self):
         '''
