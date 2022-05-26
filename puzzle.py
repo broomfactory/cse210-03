@@ -1,4 +1,4 @@
-from WordList import WordList
+from wordlist import WordList
 from jumper import Jumper
 
 class Puzzle:
