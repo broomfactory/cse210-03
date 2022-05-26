@@ -23,14 +23,16 @@ class Jumper:
     def draw_jumper(self):
         '''
         '''
-        for i in self._parachute:
-            if len(self._parachute) > 1:
+        if len(self._parachute) > 1:
+            
+            for i in self._parachute:
                 print(i)
-            else:
-                print('   X   ')
+        else:
+            print('   X   ')
 
-            print('  /|\  ')
-            print('  / \  ')
+        print('  /|\  ')
+        print('  / \  ')
+
 
     def register_miss(self):
         '''
