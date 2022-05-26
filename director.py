@@ -9,7 +9,7 @@ class Director:
 
     Attributes:
         _puzzle: A puzzle instance
-        is_playing (boolean): Whether or not the game is being played.        
+        _is_playing (boolean): Whether or not the game is being played.        
     """
 
     def __init__(self):
@@ -31,7 +31,7 @@ class Director:
         #Display initial puzzle and jumper
         self._show_puzzle()
 
-        while self.is_playing:
+        while self._is_playing:
             self._make_guess(self._get_inputs())
             self._show_puzzle()
 
@@ -65,5 +65,5 @@ class Director:
             return 
 
         self._puzzle.makeGuess(self._get_inputs())
-        self.is_playing = self._puzzle.isPlaying()
+        self._is_playing = self._puzzle.isPlaying()
  
