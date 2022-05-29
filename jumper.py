@@ -42,7 +42,7 @@ class Jumper:
     
     def is_alive(self):
         '''
-            Reports True if
+            Reports True if there is parachute left
         '''
         if len(self._parachute) > 1:
             return True
